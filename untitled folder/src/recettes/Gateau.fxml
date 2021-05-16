@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <MenuBar fx:id="barMenu">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+                  <MenuItem fx:id="menuNew" mnemonicParsing="false" onAction="#handleNew" text="Nouveau" />
+              <MenuItem fx:id="menuOuvrir" mnemonicParsing="false" onAction="#handleOpen" text="Ouvrir" />
+                  <MenuItem fx:id="menuSave" mnemonicParsing="false" onAction="#handleSave" text="Sauvegarder" />
+                  <MenuItem fx:id="menuSaveAs" mnemonicParsing="false" onAction="#handleSaveAs" text="Sauvegarder Sous" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <Text fx:id="txtGateau" layoutX="150.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Recette pour le gâteau d'anniversaire">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Text>
+      <Text fx:id="txtServir" layoutX="273.0" layoutY="197.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pour servir " />
+      <TextField fx:id="txtNum1" layoutX="345.0" layoutY="179.0" prefHeight="27.0" prefWidth="27.0" />
+      <Text fx:id="txtPersonnes" layoutX="385.0" layoutY="197.0" strokeType="OUTSIDE" strokeWidth="0.0" text="personnes" />
+      <Button fx:id="btnConfirmer" layoutX="273.0" layoutY="223.0" mnemonicParsing="false" onAction="#ajouter" text="Ajouter" />
+      <TableView fx:id="tableauQuantite" layoutX="35.0" layoutY="79.0" prefHeight="402.0" prefWidth="225.0">
+        <columns>
+          <TableColumn fx:id="columnQuantite" prefWidth="75.0" text="Quantité" />
+            <TableColumn fx:id="columnIngredient" prefWidth="149.0" text="Ingrédient" />
+        </columns>
+      </TableView>
+      <ComboBox fx:id="cboIngredient" layoutX="270.0" layoutY="136.0" prefWidth="150.0" />
+      <Text layoutX="273.0" layoutY="125.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Choisir un ingrédient" />
+      <Button fx:id="btnModifier" layoutX="356.0" layoutY="223.0" mnemonicParsing="false" onAction="#updateObjet" text="Modifier" />
+      <Button fx:id="btnEffacer" layoutX="274.0" layoutY="267.0" mnemonicParsing="false" onAction="#deleteObjet" text="Effacer" />
+      <Button fx:id="btnRecommencer" layoutX="356.0" layoutY="267.0" mnemonicParsing="false" onAction="#clearFields" prefHeight="27.0" prefWidth="110.0" text="Recommencer" />
+   </children>
+</AnchorPane>
