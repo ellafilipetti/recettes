@@ -44,7 +44,7 @@ public class gateauController {
     private Text txtServir;
 
     @FXML
-    private TableColumn<?, ?> columnIngredient;
+    private TableColumn<Gateau, String> columnIngredient;
 
     @FXML
     private Button btnEffacer;
@@ -56,7 +56,7 @@ public class gateauController {
     private Button btnRecommencer;
 
     @FXML
-    private TableColumn<?, ?> columnQuantite;
+    private TableColumn<Gateau, Double> columnQuantite;
 
     @FXML
     private Button btnModifier;
@@ -68,7 +68,7 @@ public class gateauController {
     private TextField txtNum1;
 
     @FXML
-    private ComboBox<?> cboIngredient;
+    private ComboBox<String> cboIngredient;
 
     @FXML
     private MenuItem menuOuvrir;
@@ -77,16 +77,15 @@ public class gateauController {
     private MenuItem menuSave;
 
     @FXML
-    private TableView<?> tableauQuantite;
+    private TableView<Gateau> tableauQuantite;
 
 
 
 
    //liste pour les ingrédients: permettra de donner les valuers du ComboBox
-    private ObservableList<String> list=(ObservableList<String>) 
-    FXCollections.observableArrayList("Farine","Sucre","Poudre de cacao","oeufs","lait","bicarbonate de soude","levure chimique");
+    private ObservableList<String> list=(ObservableList<String>) FXCollections.observableArrayList("Farine","Sucre","Poudre de cacao","oeufs","lait","bicarbonate de soude","levure chimique");
 
-    
+   
    //placer les ingrédeints dans un observable list
     public ObservableList<Gateau> gateauData=FXCollections.observableArrayList();
    
@@ -95,7 +94,6 @@ public class gateauController {
     {
     	return gateauData;
     }
-    
     public void initialize(URL location, ResourceBundle resources) 
 	{
 		cboIngredient.setItems(list);

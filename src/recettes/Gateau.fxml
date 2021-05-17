@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="recettes.gateauController">
    <children>
       <MenuBar fx:id="barMenu">
         <menus>
@@ -36,7 +36,7 @@
          </font>
       </Text>
       <Text fx:id="txtServir" layoutX="273.0" layoutY="197.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pour servir " />
-      <TextField fx:id="txtNum1" layoutX="345.0" layoutY="179.0" prefHeight="27.0" prefWidth="27.0" />
+      <TextField fx:id="txtNum1" layoutX="345.0" layoutY="179.0" prefHeight="27.0" prefWidth="27.0" text="5" />
       <Text fx:id="txtPersonnes" layoutX="385.0" layoutY="197.0" strokeType="OUTSIDE" strokeWidth="0.0" text="personnes" />
       <Button fx:id="btnConfirmer" layoutX="273.0" layoutY="223.0" mnemonicParsing="false" onAction="#ajouter" text="Ajouter" />
       <TableView fx:id="tableauQuantite" layoutX="35.0" layoutY="79.0" prefHeight="402.0" prefWidth="225.0">
